@@ -7,3 +7,5 @@ Tech Stack:
 Front-end: Reactjs, tailwind CSS, Nextjs
 Database: PostgresQL, Prisma ORM
 Back-end: Nodejs, Expressjs
+
+Progress: Working on Prisma Schema 
