@@ -1,0 +1,33 @@
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Player { 
+  id      Int  @id @default(autoincrement())
+  name    String    
+  role    String 
+  country String
+  age     Int
+  battingAverage Float?
+  bowlingAverage Float?
+
+} 
+model Country { 
+  id      Int  @id @default(autoincrement())
+  name    String @unique
+  rank    Int
+  players Player []
+} 
+
+model Match {
+  id         Int  @id @default(autoincrement())
+  teamOneId Int
+  teamTwoId Int
+  
+}
